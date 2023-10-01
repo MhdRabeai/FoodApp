@@ -1,0 +1,11 @@
+.favorite {
+  font-size: 35px;
+  color: red;
+}
+.favorite.not {
+  color: gray;
+}
+ngb-rating {
+  color: gold !important;
+  font-size: 30px;
+}

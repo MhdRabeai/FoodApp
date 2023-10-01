@@ -1,0 +1,20 @@
+a {
+  text-decoration: none;
+}
+.card {
+  transition: 0.5s;
+}
+.card:hover {
+  opacity: 0.7;
+}
+ngb-rating {
+  color: gold !important;
+  font-size: 25px;
+}
+.favorite {
+  font-size: 35px;
+  color: red;
+}
+.favorite.not {
+  color: gray;
+}

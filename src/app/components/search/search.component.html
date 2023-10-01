@@ -1,0 +1,20 @@
+<div class="container w-50 mt-4">
+  <div class="input-group mt-4">
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="searchTerm"
+      (change)="search()"
+      placeholder="Search Food Mine!"
+      aria-describedby="button-addon2"
+    />
+    <button
+      class="btn btn-outline-secondary"
+      type="button"
+      id="button-addon2"
+      (click)="search()"
+    >
+      Search
+    </button>
+  </div>
+</div>

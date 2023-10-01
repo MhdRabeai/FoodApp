@@ -1,0 +1,24 @@
+<div
+  *ngIf="tags"
+  class="list-group list-group-horizontal mb-3 justify-content-center flex-wrap"
+>
+  <a
+    *ngFor="let tag of tags"
+    routerLink="/tag/{{ tag.name }}"
+    class="list-group-item"
+  >
+    {{ tag.name }} ({{ tag.count }})
+  </a>
+</div>
+<div
+  *ngIf="foodPageTags"
+  class="list-group list-group-horizontal mb-3 justify-content-center flex-wrap"
+>
+  <a
+    *ngFor="let tag of foodPageTags"
+    routerLink="/tag/{{ tag }}"
+    class="list-group-item"
+  >
+    {{ tag }}
+  </a>
+</div>

@@ -1,0 +1,47 @@
+<div class="container d-flex align-items-start flex-wrap m-2">
+  <ul class="d-flex flex-column rounded-1 p-0">
+    <li
+      *ngFor="let cartItem of cart.items"
+      class="d-flex justify-content-around flex-wrap align-items-center"
+    >
+      <div>
+        <img [src]="cartItem.food.imgUrl" alt="" />
+      </div>
+      <div>
+        <a routerLink="/food/{{ cartItem.food.id }}">
+          {{ cartItem.food.name }}
+        </a>
+      </div>
+      <div>
+        <select #ref (change)="changeQuantity(cartItem, ref.value)">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+      <div>
+        {{ cartItem.price | currency }}
+      </div>
+      <div>
+        <button
+          type="button"
+          class="btn btn-outline-danger"
+          (click)="removeFromCart(cartItem)"
+        >
+          Remove
+        </button>
+      </div>
+    </li>
+  </ul>
+
+  <div
+    class="checkout d-flex flex-column align-items-start justify-content-center flex-wrap align-content-center"
+  >
+    <div class="count">
+      {{ cart.items.length }}
+    </div>
+    <div class="total-price">{{ cart.totalPrice | currency }}</div>
+  </div>
+</div>
