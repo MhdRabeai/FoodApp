@@ -1,4 +1,13 @@
-<div class="container d-flex align-items-start flex-wrap m-2">
+<app-not-found
+  [visible]="!cart || cart.items.length <= 0"
+  notFoundMsg="Cart Page Is Empty!"
+  resetLinkText="Go To HomePage"
+>
+</app-not-found>
+<div
+  *ngIf="cart && cart.items.length > 0"
+  class="container d-flex align-items-start flex-wrap m-2"
+>
   <ul class="d-flex flex-column rounded-1 p-0">
     <li
       *ngFor="let cartItem of cart.items"

@@ -18,17 +18,12 @@ export class CartPageComponent {
     private foodServ: FoodService
   ) {
     let foods = foodServ.getAll();
-    cartServ.addToCart(foods[1]);
-    cartServ.addToCart(foods[2]);
-    cartServ.addToCart(foods[3]);
+    // cartServ.addToCart(foods[1]);
+    // cartServ.addToCart(foods[2]);
+    // cartServ.addToCart(foods[3]);
     this.setCart();
   }
-  ngAfterContentChecked(): void {
-    if (this.cart.items.length === 0) {
-      this.router.navigateByUrl('');
-    }
-    this.setCart();
-  }
+
   setCart() {
     this.cart = this.cartServ.getCart();
   }

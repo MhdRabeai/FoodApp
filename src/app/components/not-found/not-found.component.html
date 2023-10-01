@@ -1,1 +1,11 @@
-<p>not-found works!</p>
+<div
+  *ngIf="visible"
+  class="d-flex align-items-center justify-content-center flex-column mt-4"
+>
+  {{ notFoundMsg }}
+  <a
+    class="btn btn-danger rounded-pill mt-4"
+    routerLink="{{ resetLinkRoute }}"
+    >{{ resetLinkText }}</a
+  >
+</div>
